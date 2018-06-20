@@ -30,13 +30,13 @@ Y---->必须,N---非必须
 
 既将用户数据从商户导入到游戏数据库，后续所用到的user必须和此user一致。
 
-参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
----      | ---     | ---     | ---     | --- | 
-uid      | int     | 11      | Y       | 用户编号 |
-email    | String  | 50      | Y       | 用户email（用户账号)|
-password | String  | 50      | Y       | 用户密码 | 
-time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
-sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
+--- | --- | --- | --- | --- | 
+uid | int | 11 | Y | 用户编号 |
+email | String | 50 | Y | 用户email（用户账号)|
+password | String | 50 | Y | 用户密码 | 
+time | int| 11 | Y  | 用户注册时间 unix 时间戳（以秒为单位) | 
+sing | String | 50 | Y  | 数字签名：双方需要验证此信息的正确性 |
 >##### sign=md5($uid $email $password $time $key)
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
