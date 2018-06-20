@@ -7,7 +7,7 @@ layout: default
 
 # [微端游戏接口文档](api/MicroEnd)
 
-# [手机SDK接口文档](#fcontrol)
+# [手机SDK接口文档](api/CellularPhoneSDK)
 
 
 
