@@ -1,5 +1,5 @@
 ---
-title: Pagsmile开发接口文档
+title: xcloudgame游戏开发接口文档
 layout: default
 ---
 
