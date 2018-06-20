@@ -24,24 +24,6 @@ Y---->必须,N---非必须
 >## 返回值类型：
  json
 
-
-
->## 同步接口
->#### 请求方式：get
->#### 返回值类型：json
-
-参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
----      | ---     | ---     | ---     | --- | 
-uid      | bigint  | 110     | Y       | 用户编号
-email    | String  | 50      | Y       | 用户email
-password | String  | 50      | Y       | 用户密码 | 
-sing     | String  | 50      | Y       | md5($uid $email $password $key)
-
-
-
-
-
-
 >## 同步接口
 
 >#### 同步接口参数
@@ -55,6 +37,7 @@ email    | String  | 50      | Y       | 用户email（用户账号)|
 password | String  | 50      | Y       | 用户密码 | 
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
 >##### sign=md5($uid $email $password $time $key)
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
@@ -68,6 +51,7 @@ password | String  | 50      | Y       | 用户密码 |
 sid      | int     | 11      | Y       | 游戏服ID |
 time     | int     | 11      | Y       | 用户登录时间 unix 时间戳（以秒为单位） | 
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
 >#### sign=md5($email $password $sid $time $key)
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
@@ -79,6 +63,7 @@ email    | String  | 50      | Y       | 用户email |
 password | String  | 50      | Y       | 用户密码 | 
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
 >##### sing=md5( $email $password $time $key)
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
