@@ -1,2 +1,2 @@
-# pagsmile.github.io
-Guidance for pagsmile api.
+# xcloudgame-developers.github.io
+Guidance for xcloudgame-developers api.
