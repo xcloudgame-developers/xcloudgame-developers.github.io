@@ -30,12 +30,12 @@ Y---->必须,N---非必须
 >#### 请求方式：get
 >#### 返回值类型：json
 
-参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
----  | --- | --- | --- | --- | 
-uid | bigint | 110 | 用户编号
-email | String | 50 | Y | 用户email
-password | String | 50 | Y | 用户密码 | 
-sing | String | 50 | Y | md5($uid $email $password $key)
+参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---      | ---     | ---     | ---     | --- | 
+uid      | bigint  | 110     | Y       | 用户编号
+email    | String  | 50      | Y       | 用户email
+password | String  | 50      | Y       | 用户密码 | 
+sing     | String  | 50      | Y       | md5($uid $email $password $key)
 
 
 
