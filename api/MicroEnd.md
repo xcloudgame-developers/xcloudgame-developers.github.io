@@ -7,8 +7,8 @@ Y---->必须,N---->非必须
 商户密钥是通讯中用户数据加密及签名验证过程中所需的加密钥匙，该钥匙由双方接口技术人员约定。
 
 >## 接口前缀：
- 测试地址：http://XXX.xcloudgame.com/<br/>
- 正式地址：http://XXX.xcloudgame.com/
+ 测试地址：https://XXX.xcloudgame.com/<br/>
+ 正式地址：https://XXX.xcloudgame.com/
  
 >## 必须实现接口
  同步接口 <br/>
@@ -19,8 +19,8 @@ Y---->必须,N---->非必须
 
 >## 接口调用地址及接口关系：
  同步接口（post方式）(https://域名/Api/syn) 向游戏数据库写入ID信息，以标志用户身份。<br/>
- 游戏登陆接口（post方式）（http://域名/Api/login） <br/>
- 游戏注册接口（post方式）（http://域名/Api/registrar） <br/>
+ 游戏登陆接口（post方式）（https://域名/Api/login） <br/>
+ 游戏注册接口（post方式）（https://域名/Api/registrar） <br/>
 
 >## 返回值类型：
  json
