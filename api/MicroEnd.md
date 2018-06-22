@@ -8,7 +8,7 @@ Y---->必须,N---->非必须
 
 >## 接口前缀：
  测试地址：http://XXX.xcloudgame.com/<br/>
- 正式地址：http://XXX. xcloudgame.com/
+ 正式地址：http://XXX.xcloudgame.com/
  
 >## 必须实现接口
  同步接口 <br/>
@@ -18,7 +18,7 @@ Y---->必须,N---->非必须
 >### 注：其他接口实现视联运商各自的需求而定
 
 >## 接口调用地址及接口关系：
- 同步接口（post方式）向游戏数据库写入ID信息，以标志用户身份。<br/>
+ 同步接口（post方式）(https://域名/Pt/syn) 向游戏数据库写入ID信息，以标志用户身份。<br/>
  游戏登陆接口（post方式）（http://域名/Pt/login） <br/>
  游戏注册接口（post方式）（http://域名/Pt/registrar） <br/>
 
