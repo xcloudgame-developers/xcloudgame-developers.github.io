@@ -12,12 +12,9 @@ Y---->必须,N---非必须
  正式地址：http://XXX.xcloudgame.com/
 
 
->##接口调用地址及接口关系：
-
+>## 接口调用地址及接口关系：
  同步接口（post方式）向游戏数据库写入ID信息，以标志用户身份。
- 
  游戏登陆接口（post方式）（http://域名/Pt/login）
- 
  游戏注册接口（post方式）（http://域名/Pt/registrar）
  
 
