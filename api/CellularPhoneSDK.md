@@ -13,9 +13,11 @@ Y---->必须,N---非必须
 
 
 >## 接口调用地址及接口关系：
- 同步接口（post方式）向游戏数据库写入ID信息，以标志用户身份。
- 游戏登陆接口（post方式）（http://域名/Pt/login）
- 游戏注册接口（post方式）（http://域名/Pt/registrar）
+ 游戏登陆接口（post）（https://域名/Pt/login）<br/>
+ 生成游客账户（post）(https://域名/Pt/tourist)<br/>
+ 游戏注册接口（post)（https://域名/Pt/registrar）<br/>
+ 游客绑定（post）（https://域名/Pt/touristdb）<br/>
+ 
  
 
 >## 返回值类型：
@@ -32,11 +34,13 @@ email    | String  | 50      | Y       | 用户email |
 password | String  | 50      | Y       | 用户密码 | 
 app_id   | string  | 20      | Y       | App编号 |
 time     | int     | 11      | Y       | 用户登录时间 unix 时间戳（以秒为单位） | 
+channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play）|
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >#### sign=md5($email $password $app_id $time $key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data：uid
  
 
  
@@ -44,15 +48,15 @@ sing     | String  | 50      | Y       | 数字签名：双方需要验证此信
 >## 游客账户生成接口
 
 参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
-email    | String  | 50      | Y       | 随机生成email |
-password | String  | 50      | Y       | 随机生成用户密码 | 
+channel  | String  | 50      | N       | 用户渠道（例：App Store、Google play) |
+app_id   | String  | 20      | Y       | App编号 | 
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5($email $password $time $key)
+>##### sign=md5($appid $time $key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
-
+>##### data: email、password、uid（用户唯一标识）
 
 
 
@@ -69,6 +73,7 @@ sing     | String  | 50      | Y       | 数字签名：双方需要验证此信
 ---      | ---     | ---     | ---     | --- | 
 email    | String  | 50      | Y       | 用户email |
 password | String  | 50      | Y       | 用户密码 | 
+channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | string  | 20      | Y       | app编号 |
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
@@ -76,6 +81,7 @@ sing     | String  | 50      | Y       | 数字签名：双方需要验证此信
 >##### sing=md5( $email $password $app_id $time $key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: email、password、uid
 
 
 
@@ -83,9 +89,10 @@ sing     | String  | 50      | Y       | 数字签名：双方需要验证此信
 
 参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---      | ---     | ---     | ---     | --- | 
-email    | String  | 50      | Y       | 用户email |
-password | String  | 50      | Y       | 用户密码 | 
+email    | String  | 50      | Y       | 用户绑定的email |
+password | String  | 50      | Y       | 用户绑定的密码 | 
 uid      | string  | 20      | Y       | 游客标识 |
+channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | string  | 20      | Y       | app编号 |
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
@@ -93,6 +100,7 @@ sing     | String  | 50      | Y       | 数字签名：双方需要验证此信
 >##### sing=md5( $email $password $uid $app_id $time $key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: email、password、uid
 
 
 >## 下单接口
