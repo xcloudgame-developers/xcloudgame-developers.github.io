@@ -35,7 +35,7 @@ password | String  | 50      | Y       | 用户密码 |
 app_id   | string  | 20      | Y       | App编号 |
 time     | int     | 11      | Y       | 用户登录时间 unix 时间戳（以秒为单位） | 
 channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play）|
-sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >#### sign=md5($email $password $app_id $time $key)
 
@@ -51,7 +51,7 @@ sing     | String  | 50      | Y       | 数字签名：双方需要验证此信
 channel  | String  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | String  | 20      | Y       | App编号 | 
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
-sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >##### sign=md5($appid $time $key)
 
@@ -76,9 +76,9 @@ password | String  | 50      | Y       | 用户密码 |
 channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | string  | 20      | Y       | app编号 |
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
-sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sing=md5( $email $password $app_id $time $key)
+>##### sign=md5( $email $password $app_id $time $key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: email、password、uid
@@ -95,9 +95,9 @@ uid      | string  | 20      | Y       | 游客标识 |
 channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | string  | 20      | Y       | app编号 |
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
-sing     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sing=md5( $email $password $uid $app_id $time $key)
+>##### sign=md5( $email $password $uid $app_id $time $key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: email、password、uid
@@ -118,9 +118,9 @@ game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
 channel    | string  | 20          | Y       | 下单渠道 |
 data       | string  | 100         | N       | 传递参数 |
 time       | int     | 11          | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
-sing       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sing=md5( $uid $game_order $amout $currency $game_good_id $Key)
+>##### sign=md5( $uid $game_order $amout $currency $game_good_id $Key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
@@ -138,9 +138,9 @@ game_money | int     | 11          | Y       | 游戏币数量 |
 game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
 channel    | string  | 20          | Y       | 下单渠道 |
 data       | string  | 100         | N       | 传递参数 |
-sing       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sing=md5( $uid $server_id $app_id $game_order $amout $currency $game_good_id $Key)
+>##### sign=md5( $uid $server_id $app_id $game_order $amout $currency $game_good_id $Key)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
