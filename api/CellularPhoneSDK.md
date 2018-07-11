@@ -37,7 +37,7 @@ time     | int     | 11      | Y       | 用户登录时间 unix 时间戳（以
 channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play）|
 sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->#### sign=md5($email $password $app_id $time $key)
+>#### sign=md5($app_id $email $key $password  $time )  按字典顺序排列加密
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data：uid
@@ -53,7 +53,7 @@ app_id   | String  | 20      | Y       | App编号 |
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
 sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5($appid $time $key)
+>##### sign=md5($appid $key $time )
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: email、password、uid（用户唯一标识）
@@ -97,7 +97,7 @@ app_id   | string  | 20      | Y       | app编号 |
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5( $email $password $uid $app_id $time $key)
+>##### sign=md5( $app_id $email $key $password  $time $uid)
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: email、password、uid
