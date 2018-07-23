@@ -50,10 +50,11 @@ sign     | String  | 50      | Y       | 数字签名：双方需要验证此信
 参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
 channel  | String  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | String  | 20      | Y       | App编号 | 
+gid      | int     | 11      | Y       | 游戏ID（游戏1、游戏2......） | 
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
 sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5(md5("app_id=$app_id&channel=$channel&time=$time&$key"))
+>##### sign=md5(md5("app_id=$app_id&channel=$channel&gid=$gid&time=$time&$key"))
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: email、password、uid（用户唯一标识）
@@ -75,10 +76,11 @@ email    | String  | 50      | Y       | 用户email |
 password | String  | 50      | Y       | 用户密码 | 
 channel  | string  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | string  | 20      | Y       | app编号 |
+gid      | int     | 11      | Y       | 游戏ID（游戏1、游戏2......） | 
 time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5(md5("app_id=$app_id&channel=$channel&email=$email&password=$password&time=$time&$key"))
+>##### sign=md5(md5("app_id=$app_id&channel=$channel&email=$email&gid=$gid&password=$password&time=$time&$key"))
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: email、password、uid
