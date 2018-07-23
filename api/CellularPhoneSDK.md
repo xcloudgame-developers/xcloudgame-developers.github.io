@@ -166,3 +166,4 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 113   | amout 或currency错误 |
 114   | game_order为空或 | 
 115   | game_money 或game_good_id有误 |
+116   | 用户不存在 |
