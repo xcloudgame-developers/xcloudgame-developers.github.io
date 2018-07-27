@@ -111,10 +111,11 @@ sign     | String  | 50      | Y       | 数字签名：双方需要验证此信
 ---        | ---     | ---         | ---     | --- | 
 uid        | int     | 11          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服ID | 
+gid        | int     | 10          | Y       | 游戏编号 | 
 app_id     | string  | 20          | Y       | app编号 |
 game_order | string  | 20          | Y       | 游戏订单号 |
-amout      | float   |保留两位小数   | Y       | 订单金额 |
-currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. USD）|
+amount      | float   |保留两位小数   | Y       | 订单金额 |
+currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. BRL）|
 game_money | int     | 11          | Y       | 游戏币数量 |
 game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
 channel    | string  | 20          | Y       | 下单渠道 |
@@ -122,19 +123,20 @@ data       | string  | 100         | N       | 传递参数 |
 time       | int     | 11          | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5( $uid $game_order $amout $currency $game_good_id $Key)
+>##### sign=md5(md5("uid=$uid&sid=$sid&app_id=$app_id&gid=$gid&game_order=$game_order&amount=$amount&currency=$currency&game_good_id=$game_good_id&&$key")) 
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
->## 发奖接口
+>## 发奖接口（非必须）
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- | 
 uid        | int     | 11          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服ID | 
+gid        | int     | 10          | Y       | 游戏编号 | 
 app_id     | string  | 20          | Y       | app编号 |
 game_order | string  | 20          | Y       | 游戏订单号 |
-amout      | float   |保留两位小数   | Y       | 订单金额 |
+amount      | float   |保留两位小数   | Y       | 订单金额 |
 currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. USD）|
 game_money | int     | 11          | Y       | 游戏币数量 |
 game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
@@ -142,7 +144,7 @@ channel    | string  | 20          | Y       | 下单渠道 |
 data       | string  | 100         | N       | 传递参数 |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5( $uid $server_id $app_id $game_order $amout $currency $game_good_id $Key)
+>##### sign=md5(md5("uid=$uid&sid=$sid&app_id=$app_id&gid=$gid&game_order=$game_order&amount=$amount&currency=$currency&game_good_id=$game_good_id&&$key")) 
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
@@ -166,6 +168,6 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 111   | game_order为空 |
 112   | game_order重复 |
 113   | amout 或currency错误 |
-114   | game_order为空或 | 
+114   | 需求参数为空 | 
 115   | game_money 或game_good_id有误 |
 116   | 用户不存在 |
