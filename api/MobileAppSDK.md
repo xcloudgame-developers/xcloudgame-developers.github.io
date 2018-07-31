@@ -18,7 +18,7 @@ Y---->必须,N---非必须
  游戏注册接口（post)（https://域名/Pt/registrar）<br/>
  游客绑定（post）（https://域名/Pt/touristdb）<br/>
  下单接口（post）（https://域名/Pt/order）<br/>
- 
+ 找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
  
 
 >## 返回值类型：
