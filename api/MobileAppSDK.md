@@ -120,7 +120,7 @@ currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. BRL）|
 game_money | int     | 11          | Y       | 游戏币数量 |
 game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
 channel    | string  | 20          | Y       | 下单渠道 |
-data       | string  | 100         | N       | 传递参数 |
+data       | string  | 100         | Y       | 传递参数 |
 time       | int     | 11          | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
