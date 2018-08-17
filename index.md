@@ -9,6 +9,8 @@ layout: default
 
 # [移动SDK接口文档](api/MobileAppSDK)
 
+# [豪门足球游戏对接文档](api/SoccerSDK)
+
 
 
 
