@@ -41,6 +41,8 @@ Y---->必须,N---非必须
 uid        | int     | 11          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服ID |
 gid        | int     | 10          | Y       | 游戏编号 |
+imei       | string  | 50          | Y       | 手机imei串号 |
+tel        | int     | 11          | Y       | 手机号 |
 time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
@@ -51,6 +53,8 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
 成功后 返回json串其中status状态码
+
+安卓获取IMEI参考：https://blog.csdn.net/u013059863/article/details/49847109
 
 
 >## UC接收Facebook信息接口
