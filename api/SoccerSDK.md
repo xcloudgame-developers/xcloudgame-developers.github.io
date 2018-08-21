@@ -3,6 +3,8 @@
 
 ![](/assets/img/soccer.jpg)
 
+>## 更新：
+UC接收Facebook信息接口添加参数：fbsource，last_name，first_name
 >## 数填写说明：
 
 Y---->必须,N---非必须
@@ -63,6 +65,9 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 ---        | ---     | ---         | ---     | --- |
 fbid       | int     | 11          | Y       | facebookID |
 fbmail     | String  | 50          | Y       | facebook email |
+fbsource   | String  | 50          | Y       | facebook fbsource |
+last_name  | String  | 50          | Y       | facebook last_name |
+first_name | String  | 50          | Y       | facebook first_name |
 busid      | String  | 50          | Y       | facebook token_for_business (facebook 唯一标识) |
 gid        | int     | 10          | Y       | 游戏编号 |
 time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
