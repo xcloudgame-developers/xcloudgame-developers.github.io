@@ -4,7 +4,7 @@
 ![](/assets/img/soccer.jpg)
 
 >## 更新：
-UC接收Facebook信息接口添加参数：fbsource，last_name，first_name
+UC接收Facebook信息接口添加参数：fbsource，last_name，first_name      2018/8/21
 >## 数填写说明：
 
 Y---->必须,N---非必须
