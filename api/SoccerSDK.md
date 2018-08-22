@@ -51,7 +51,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 >##### 签名方法
 
-所有字段按照键值排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
@@ -76,7 +76,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 >##### 签名方法
 
-所有字段按照键值排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: uid
