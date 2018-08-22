@@ -19,7 +19,8 @@ Y---->必须,N---非必须
 >## 调用登录及支付接口：
  H5页面地址：https://tecnofut.xcloudgame.com/Pt/landing<br/>
  下单接口（post）（https://域名/Pt/order）<br/>
- 接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
+ UC接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
+ UC接收Facebook信息接口：https://tecnofut.xcloudgame.com/Pt/getfb<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
 >## 返回值类型：
