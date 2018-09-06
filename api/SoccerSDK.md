@@ -64,7 +64,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- |
-fbid       | int     | 11          | Y       | facebookID |
+fbid       | String  | 50          | Y       | facebookID |
 fbmail     | String  | 50          | Y       | facebook email |
 fbsource   | String  | 50          | Y       | facebook fbsource |
 last_name  | String  | 50          | Y       | facebook last_name |
