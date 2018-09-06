@@ -32,8 +32,8 @@
         <entry file="file://$PROJECT_DIR$/api/MobileAppSDK.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="340">
-                <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+              <first_editor relative-caret-position="315">
+                <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -239,7 +239,7 @@
       <workItem from="1534335728182" duration="619000" />
       <workItem from="1534412106573" duration="145000" />
       <workItem from="1535542476519" duration="2964000" />
-      <workItem from="1536223041647" duration="479000" />
+      <workItem from="1536223041647" duration="642000" />
     </task>
     <task id="LOCAL-00001" summary="下单接口文档">
       <created>1532672497352</created>
@@ -283,11 +283,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535545558629</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="google 支付验证接口文档">
+      <created>1536226449520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1536226449520</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19346000" />
+    <option name="totallyTimeSpent" value="19509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1530" y="69" width="1400" height="819" extended-state="0" />
@@ -733,8 +740,8 @@
     <entry file="file://$PROJECT_DIR$/api/MobileAppSDK.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="340">
-            <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <first_editor relative-caret-position="315">
+            <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
             <folding />
           </first_editor>
           <second_editor />

@@ -145,6 +145,7 @@ product    | string  | 50          | Y       | google product  |
 app_id     | string  | 20          | Y       | app编号 |
 token      | string  | 20          | Y       | google 验证token |
 game_order | string  | 20          | Y       | 游戏订单号 |
+google_order | string  | 20          | Y       | 谷歌订单号 |
 game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
 time       | int     | 11          | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
 sign       | string  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
