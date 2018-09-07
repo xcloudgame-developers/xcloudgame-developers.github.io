@@ -111,7 +111,7 @@ sign     | String  | 50      | Y       | 数字签名：双方需要验证此信
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- | 
-uid        | int     | 11          | Y       | 用户UID |
+uid        | string     | 11          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服ID | 
 gid        | int     | 10          | Y       | 游戏编号 | 
 app_id     | string  | 20          | Y       | app编号 |
@@ -138,7 +138,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- | 
-uid        | int     | 11          | Y       | 用户UID |
+uid        | string     | 11          | Y       | 用户UID |
 gid        | int     | 10          | Y       | 游戏编号 |
 package    | string  | 50          | Y       | 包名字  | 
 product    | string  | 50          | Y       | google product  | 
