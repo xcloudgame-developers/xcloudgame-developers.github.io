@@ -44,7 +44,6 @@ Y---->必须,N---非必须
 uid        | int     | 11          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服ID |
 gid        | int     | 10          | Y       | 游戏编号 |
-gname      | string  | 50          | Y       | 玩家游戏名称 |
 time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
