@@ -61,18 +61,18 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 >## UC接收Facebook信息接口
 
-参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
----        | ---     | ---         | ---     | --- |
-fbid       | String  | 50          | Y       | facebookID |
-fbmail     | String  | 50          | N       | facebook email |
-fbsource   | String  | 50          | N       | facebook fbsource |
-fbname     | String  | 50          | Y       | facebook fbname   |
-last_name  | String  | 50          | Y       | facebook last_name |
-first_name | String  | 50          | Y       | facebook first_name |
-busid      | String  | 50          | Y       | facebook token_for_business (facebook 唯一标识) |
-gid        | int     | 10          | Y       | 游戏编号 |
-time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
-sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+参数名       | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---          | ---     | ---         | ---     | --- |
+fbid         | String  | 50          | Y       | facebookID |
+fbmail       | String  | 50          | N       | facebook email |
+fbname       | String  | 50          | Y       | facebook fbname   |
+last_name    | String  | 50          | Y       | facebook last_name |
+first_name   | String  | 50          | Y       | facebook first_name |
+busid        | String  | 50          | Y       | facebook token_for_business (facebook 唯一标识) |
+channel_from | String  | 50          | Y       | 下载渠道 |
+gid          | int     | 10          | Y       | 游戏编号 |
+time         | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign         | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >##### fbsource（暂定）
 如果获取不到，就为默认下载渠道
