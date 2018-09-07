@@ -44,8 +44,7 @@ Y---->必须,N---非必须
 uid        | int     | 11          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服ID |
 gid        | int     | 10          | Y       | 游戏编号 |
-imei       | string  | 50          | Y       | 手机imei串号 |
-tel        | int     | 11          | Y       | 手机号 |
+gname      | string  | 50          | Y       | 玩家游戏名称 |
 time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
@@ -65,8 +64,9 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- |
 fbid       | String  | 50          | Y       | facebookID |
-fbmail     | String  | 50          | Y       | facebook email |
-fbsource   | String  | 50          | Y       | facebook fbsource |
+fbmail     | String  | 50          | N       | facebook email |
+fbsource   | String  | 50          | N       | facebook fbsource |
+fbname     | String  | 50          | Y       | facebook fbname   |
 last_name  | String  | 50          | Y       | facebook last_name |
 first_name | String  | 50          | Y       | facebook first_name |
 busid      | String  | 50          | Y       | facebook token_for_business (facebook 唯一标识) |
