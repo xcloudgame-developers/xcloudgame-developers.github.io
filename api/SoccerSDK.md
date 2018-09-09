@@ -21,6 +21,8 @@ Y---->必须,N---非必须
  下单接口（post）（https://域名/Pt/order）<br/>
  UC接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
  UC接收Facebook信息接口：https://tecnofut.xcloudgame.com/Pt/getfb<br/>
+ 下单接口（post）（https://域名/Pt/order）<br/>
+ 谷歌验证接口（post）（https://支付域名/Googlepay/check）<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
 >## 返回值类型：
@@ -125,10 +127,10 @@ sign         | String  | 50          | Y       | 数字签名：双方需要验�
 >## 下单接口
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
----        | ---     | ---         | ---     | --- |
-uid        | string  | 20          | Y       | 用户UID |
-sid        | int     | 10          | Y       | 游戏服ID |
-gid        | int     | 10          | Y       | 游戏编号 |
+---        | ---     | ---         | ---     | --- | 
+uid        | string     | 20          | Y       | 用户UID |
+sid        | int     | 10          | Y       | 游戏服ID | 
+gid        | int     | 10          | Y       | 游戏编号 | 
 app_id     | string  | 20          | Y       | app编号 |
 game_order | string  | 20          | Y       | 游戏订单号 |
 amount     | float   |保留两位小数   | Y       | 订单金额 |
@@ -147,6 +149,31 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
 成功后 返回json串其中status状态码，order_id 是支付成功返回的订单号
+
+
+>## google 支付验证接口
+
+参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---        | ---     | ---         | ---     | --- | 
+uid        | string     | 20          | Y       | 用户UID |
+gid        | int     | 10          | Y       | 游戏编号 |
+package    | string  | 50          | Y       | 包名字  | 
+product    | string  | 50          | Y       | google product  | 
+app_id     | string  | 20          | Y       | app编号 |
+token      | string  | 20          | Y       | google 验证token |
+game_order | string  | 20          | Y       | 游戏订单号 |
+google_order | string  | 20          | Y       | 谷歌订单号 |
+game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
+time       | int     | 11          | Y       | 用户注册时间 unix 时间戳（以秒为单位) |
+sign       | string  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照键值排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+
+成功后 返回json串其中status状态码
 
 >## 发奖接口（非必须）
 
