@@ -74,8 +74,6 @@ gid          | int     | 10          | Y       | 游戏编号 |
 time         | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
 sign         | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### fbsource（暂定）
-如果获取不到，就为默认下载渠道
 >##### 签名方法
 
 所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
