@@ -84,6 +84,44 @@ sign         | String  | 50          | Y       | 数字签名：双方需要验�
 
 
 
+>## 接收安卓设备信息接口
+
+参数名       | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---          | ---     | ---         | ---     | --- |
+devicename   | String  | 50          | Y       | 设备名称（XXX的手机） |
+sysname      | String  | 50          | N       | 系统名称（iPhone OS） |
+sysversion   | String  | 50          | Y       | 系统版本（9.2）  |
+deviceuuid   | String  | 50          | Y       | 设备唯一标识 |
+devicemodel  | String  | 50          | Y       | 手机类型（iPhone 6 plus） |
+ua           | String  | 50          | Y       | 客户ua |
+ip           | String  | 50          | Y       | 客户ip |
+time         | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign         | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+
+成功后 返回json串其中status状态码
+
+
+
+>## 接收ios设备信息接口
+
+参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---         | ---     | ---         | ---     | --- |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+
+成功后 返回json串其中status状态码
+
+
 >## 下单接口
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
