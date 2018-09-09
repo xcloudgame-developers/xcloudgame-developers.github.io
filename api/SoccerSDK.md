@@ -155,7 +155,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 ---        | ---     | ---         | ---     | --- | 
 uid        | string     | 20          | Y       | 用户UID |
 gid        | int     | 10          | Y       | 游戏编号 |
-package    | string  | 50          | Y       | 包名字  | 
+package_name    | string  | 50          | Y       | 包名字  | 
 product_id    | string  | 50          | Y       | google product  | 
 app_id     | string  | 20          | Y       | app编号 |
 token      | string  | 20          | Y       | google 验证token |
