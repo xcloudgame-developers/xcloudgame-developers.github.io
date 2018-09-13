@@ -177,12 +177,10 @@ sign       | string  | 50          | Y       | 数字签名：双方需要验证
 ---        | ---     | ---         | ---     | --- | 
 uid        | string     | 20          | Y       | 用户UID | 
 gid        | int     | 10          | Y       | 游戏编号 | 
-package_name    | string  | 50          | Y       | 包名字  | 
-product_id    | string  | 50          | Y       | google product  | 
-app_id     | string  | 20          | Y       | app编号 | 
+package_name    | string  | 50          | Y       | apple pay bid  | 
+product_id    | string  | 50          | Y       | apple pay product  | 
 token      | string  | 20          | Y       | apple pay 验证token | 
 game_order | string  | 20          | Y       | 游戏订单号 | 
-apple_order | string  | 20          | Y       | 苹果订单号 | 
 time       | int     | 11          | Y       | 验证时间 unix 时间戳（以秒为单位) | 
 sign       | string  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 | 
 
@@ -240,4 +238,4 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 115   | game_money 或game_good_id有误 |
 116   | 用户不存在 |
 117   | 系统错误 |
-
+118    |渠道订单异常 |
