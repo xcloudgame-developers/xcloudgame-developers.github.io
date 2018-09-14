@@ -21,6 +21,7 @@ Y---->必须,N---非必须
  下单接口（post）（https://域名/Pt/order）<br/>
  谷歌支付验证接口（post）（https://域名/Googlepay/check）<br/>
  苹果验证接口（post）（https://域名/Applepay/check）<br/>
+ 订单状态查询接口（post）（https://tecnofut.xcloudgame.com/Pt/checkorder）<br/>
  UC接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
  UC接收Facebook信息接口：https://tecnofut.xcloudgame.com/Pt/getfb<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
@@ -189,9 +190,23 @@ sign       | string  | 50          | Y       | 数字签名：双方需要验证
 所有字段按照键值排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 
+>## 订单状态查询接口 
+ 
+参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 | 
+---        | ---     | ---         | ---     | --- | 
+uid        | string     | 20          | Y       | 用户UID | 
+gid        | int     | 10          | Y       | 游戏编号 | 
+game_order | string  | 20          | Y       | 游戏订单号 | 
+sign       | string  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 | 
+
+>##### 签名方法
+
+所有字段按照键值排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
-成功后 返回json串其中status状态码,200为验证成功 
+成功后 返回json串其中status状态码,200为支付成功 
 
 >## 发奖接口（非必须）
 
@@ -221,7 +236,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 错误码 | 描述 |
 ---   | ---  |
 100   | email信息不全 |
-101   | password信息不完整 |
+101   | password信息不完整 |·
 102   | email 已被注册 |
 103   | password 错误 |
 104   | time信息不完整 |
@@ -240,3 +255,4 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 117   | 系统错误 |
 118    |渠道订单异常 |
 119    |验证异常 |
+120    |支付失败或为支付|
