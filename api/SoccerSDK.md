@@ -24,6 +24,8 @@ Y---->必须,N---非必须
  订单状态查询接口（post）（https://tecnofut.xcloudgame.com/Pt/checkorder）<br/>
  UC接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
  UC接收Facebook信息接口：https://tecnofut.xcloudgame.com/Pt/getfb<br/>
+ 获取ios手机信息接口：https://tecnofut.xcloudgame.com/Pt/getios<br/>
+ 获取安卓手机信息接口：https://tecnofut.xcloudgame.com/Pt/getandroid<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
 >## 返回值类型：
@@ -113,15 +115,15 @@ sign         | String  | 50          | Y       | 数字签名：双方需要验�
 
 >## 接收安卓设备信息接口
 
-参数名          | 参数类型 | 最大长度     | 是否必填 | 描述 |
----             | ---     | ---         | ---     | --- |
-imei            | String  | 50          | Y       | IMEI号 |
-model           | String  | 50          | N       | 手机型号 |
-width           | String  | 50          | Y       | 手机内置分辨率getWidth |
-height          | String  | 50          | Y       | getHeight |
+参数名 | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---    | ---     | ---         | ---     | --- |
+imei   | String  | 50          | Y       | IMEI号 |
+model  | String  | 50          | N       | 手机型号 |
+width  | String  | 50          | Y       | 手机内置分辨率getWidth |
+height | String  | 50          | Y       | getHeight |
 simoperatornam  | String  | 50          | Y       | 运营商名字 |
-time            | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
-sign            | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+time   | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign   | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 >##### 签名方法
 
 所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
