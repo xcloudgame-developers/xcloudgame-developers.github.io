@@ -234,7 +234,9 @@ channel    | string  | 20          | Y       | 下单渠道 |
 data       | string  | 100         | N       | 传递参数 |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
->##### sign=md5(md5("uid=$uid&sid=$sid&app_id=$app_id&gid=$gid&game_order=$game_order&amount=$amount&currency=$currency&game_good_id=$game_good_id&&$key"))
+>##### 签名方法
+
+所有字段按照键值排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
