@@ -64,7 +64,48 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 安卓获取IMEI参考：https://blog.csdn.net/u013059863/article/details/49847109
 
 
->## UC接收Facebook信息接口
+>## 修改后UC接收Facebook信息接口
+
+参数名              | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---                 | ---     | ---         | ---     | --- |
+token_for_business  | String  | 50          | Y       | facebook用户的bid，唯一区分facebook用户 |
+ids_for_business    | String  | 260         | Y       | 用户授权过我们的所有游戏的Facebookapp信息 json数据 |
+type                | String  | 50          | Y       | 设备类型（1代表安卓、2代表ios） |
+device              | String  | 260         | Y       | 设备信息（ios/android）json数据 |
+gameid              | String  | 50          | Y       | facebook用户第一次玩的游戏的gameid，我们定义的gameid |
+fbappid             | String  | 50          | Y       | facebook用户第一次玩的游戏的facebook appid，facebook中申请的appid,类似入口名称 |
+facebook_id         | String  | 50          | Y       | facebook用户第一次玩的游戏的facebookid |
+entry_lang          | String  | 50          | N       | pt/en |
+entry_type          | String  | 50          | N       | FB/LP/XC 目前是这三种类型 |
+entry_name          | String  | 50          | N       | 游戏的多个马甲包名字 |
+source              | String  | 50          | N       | facebook的推广渠道，读取fb_source参数获得的值 |
+mainsource          | String  | 50          | N       | 入口主渠道 |
+subsource           | String  | 50          | N       | 入口子渠道 |
+first_name          | String  | 50          | Y       | first_name |
+last_name           | String  | 50          | Y       | last_name |
+middle_name         | String  | 50          | Y       | middle_name |
+name                | String  | 50          | Y       | name |
+short_name          | String  | 50          | Y       | short_name |
+name_format         | String  | 50          | Y       | name_format |
+home_page           | String  | 50          | N       | 用户主页 |
+sex                 | String  | 50          | N       | 性别 |
+birthday            | String  | 50          | N       | 生日 |
+picture             | String  | 50          | Y       | facebook头像 |
+email               | String  | 50          | Y       | facebook邮箱 |
+location            | String  | 50          | N       | facebook用户地址 |
+locale              | String  | 50          | N       | 地区 |
+regip               | String  | 50          | N       | 注册ip |
+regdate             | String  | 50          | Y       | 注册时间 |
+sign                | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: uid
+成功后 返回json串其中status状态码,uid为用户ID
+
+>## 修改前UC接收Facebook信息接口
 
 参数名       | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---          | ---     | ---         | ---     | --- |
