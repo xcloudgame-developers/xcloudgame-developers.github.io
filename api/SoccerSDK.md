@@ -86,10 +86,6 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 成功后 返回json串其中status状态码
 
 
-
-安卓获取IMEI参考：https://blog.csdn.net/u013059863/article/details/49847109
-
-
 >## 修改后UC接收Facebook信息接口
 
 参数名              | 参数类型 | 最大长度     | 是否必填 | 描述 |
