@@ -41,6 +41,30 @@ Y---->必须,N---非必须
 >## 2、SDK通知游戏客户端登录注册结果
 
 
+>## 3、修改后UC接收选服信息接口
+
+参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---        | ---     | ---         | ---     | --- |
+uid        | string  | 20          | Y       | 用户UID |
+lastsid    | int     | 10          | Y       | 游戏服务器编码 |
+entry_tyoe | int     | 10          | Y       | 入口类型 |
+entry_name | string  | 50          | Y       | 入口名称 |
+entry_lang | string  | 50          | Y       | 语言 |
+source     | string  | 50          | Y       | 入口渠道 |
+mainsource | string  | 50          | Y       | 入口主渠道 |
+subsource  | string  | 50          | Y       | 入口子渠道 |
+gidloginid | string  | 50          | Y       | 接收Facebook信息返回的数据 |
+url        | string  | 50          | Y       | 来源url |
+time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+
+成功后 返回json串其中status状态码
 
 >## 3、UC接收选服信息接口
 
@@ -60,6 +84,8 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
 成功后 返回json串其中status状态码
+
+
 
 安卓获取IMEI参考：https://blog.csdn.net/u013059863/article/details/49847109
 
@@ -103,8 +129,8 @@ sign                | String  | 50          | Y       | 数字签名：双方需
 所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
->##### data: uid
-成功后 返回json串其中status状态码,uid为用户ID
+>##### data: uid、gidloginid
+成功后 返回json串其中status状态码,uid为用户ID，gidloginid为用户gidloginlog的id
 
 >## 修改前UC接收Facebook信息接口
 
