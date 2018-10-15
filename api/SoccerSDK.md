@@ -210,6 +210,7 @@ game_order | string  | 20          | Y       | 游戏订单号 |
 amount     | float   |保留两位小数   | Y       | 订单金额 |
 currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. BRL）|
 game_money | int     | 11          | Y       | 游戏币数量 |
+product_id | string  | 100          | Y       | 商品编码 |
 game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
 channel    | string  | 20          | Y       | 下单渠道 |
 data       | string  | 100         | Y       | 传递参数 |
