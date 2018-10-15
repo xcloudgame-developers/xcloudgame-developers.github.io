@@ -47,14 +47,14 @@ Y---->必须,N---非必须
 ---        | ---     | ---         | ---     | --- |
 uid        | string  | 20          | Y       | 用户UID |
 lastsid    | int     | 10          | Y       | 游戏服务器编码 |
-entry_tyoe | int     | 10          | Y       | 入口类型 |
-entry_name | string  | 50          | Y       | 入口名称 |
-entry_lang | string  | 50          | Y       | 语言 |
-source     | string  | 50          | Y       | 入口渠道 |
-mainsource | string  | 50          | Y       | 入口主渠道 |
-subsource  | string  | 50          | Y       | 入口子渠道 |
+entry_tyoe | int     | 10          | N       | 入口类型 |
+entry_name | string  | 50          | N       | 入口名称 |
+entry_lang | string  | 50          | N       | 语言 |
+source     | string  | 50          | N       | 入口渠道 |
+mainsource | string  | 50          | N       | 入口主渠道 |
+subsource  | string  | 50          | N       | 入口子渠道 |
 gidloginid | string  | 50          | Y       | 接收Facebook信息返回的数据 |
-url        | string  | 50          | Y       | 来源url |
+url        | string  | 50          | N       | 来源url |
 time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
