@@ -50,7 +50,7 @@ lastsid    | int     | 10          | Y       | 游戏服务器编码 |
 entry_tyoe | int     | 10          | N       | 入口类型 |
 entry_name | string  | 50          | N       | 入口名称 |
 entry_lang | string  | 50          | N       | 语言 |
-source     | string  | 50          | Y       | 入口渠道 |
+source     | string  | 50          | Y       | 下载渠道 |
 mainsource | string  | 50          | N       | 入口主渠道 |
 subsource  | string  | 50          | N       | 入口子渠道 |
 gidloginid | string  | 50          | Y       | 接收Facebook信息返回的数据 |
@@ -100,7 +100,7 @@ facebook_id         | String  | 50          | Y       | facebook用户第一次�
 entry_lang          | String  | 50          | N       | pt/en |
 entry_type          | String  | 50          | N       | FB/LP/XC 目前是这三种类型 |
 entry_name          | String  | 50          | N       | 游戏的多个马甲包名字 |
-source              | String  | 50          | Y       | facebook的推广渠道，读取fb_source参数获得的值 |
+source              | String  | 50          | Y       | 下载渠道 |
 mainsource          | String  | 50          | N       | 入口主渠道 |
 subsource           | String  | 50          | N       | 入口子渠道 |
 first_name          | String  | 50          | Y       | first_name |
