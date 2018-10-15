@@ -47,7 +47,7 @@ Y---->必须,N---非必须
 ---        | ---     | ---         | ---     | --- |
 uid        | string  | 20          | Y       | 用户UID |
 lastsid    | int     | 10          | Y       | 游戏服务器编码 |
-entry_tyoe | int     | 10          | N       | 入口类型 |
+entry_type | int     | 10          | N       | 入口类型 |
 entry_name | string  | 50          | N       | 入口名称 |
 entry_lang | string  | 50          | N       | 语言 |
 source     | string  | 50          | Y       | 下载渠道 |
