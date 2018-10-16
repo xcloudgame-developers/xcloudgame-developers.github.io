@@ -91,9 +91,9 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 参数名              | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---                 | ---     | ---         | ---     | --- |
 token_for_business  | String  | 50          | Y       | facebook用户的bid，唯一区分facebook用户 |
-ids_for_business    | String  | 260         | Y       | 用户授权过我们的所有游戏的Facebookapp信息 json数据 |
+ids_for_business    | String  | 260         | Y       | 用户授权过我们的所有游戏的Facebookapp信息 json数据  不参与加密 |
 type                | String  | 50          | Y       | 设备类型（1代表安卓、2代表ios） |
-device              | String  | 260         | Y       | 设备信息（ios/android）json数据 |
+device              | String  | 260         | Y       | 设备信息（ios/android）json数据  不参与加密 |
 gameid              | String  | 50          | Y       | facebook用户第一次玩的游戏的gameid，我们定义的gameid |
 fbappid             | String  | 50          | Y       | facebook用户第一次玩的游戏的facebook appid，facebook中申请的appid,类似入口名称 |
 facebook_id         | String  | 50          | Y       | facebook用户第一次玩的游戏的facebookid |
