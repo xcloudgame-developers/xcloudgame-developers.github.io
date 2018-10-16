@@ -112,7 +112,7 @@ name_format         | String  | 50          | Y       | name_format |
 home_page           | String  | 50          | N       | 用户主页 |
 sex                 | String  | 50          | N       | 性别 |
 birthday            | String  | 50          | N       | 生日 |
-picture             | String  | 50          | Y       | facebook头像 |
+picture             | String  | 50          | N       | facebook头像 |
 email               | String  | 50          | Y       | facebook邮箱 |
 location            | String  | 50          | N       | facebook用户地址 |
 locale              | String  | 50          | N       | 地区 |
