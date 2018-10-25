@@ -311,6 +311,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 >## 游客账户生成接口
 
 参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---      | ---     | ---      | ---     | --- |
 channel  | String  | 50      | N       | 用户渠道（例：App Store、Google play) |
 app_id   | String  | 20      | Y       | App编号 | 
 gid      | int     | 11      | Y       | 游戏ID（游戏1、游戏2......） | 
