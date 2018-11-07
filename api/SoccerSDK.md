@@ -313,6 +313,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- |
+device     | String  | 260     | Y       | 设备信息（ios/android）json数据  不参与加密 |
 entry_lang | String  | 50      | N       | pt/en |
 entry_type | String  | 50      | N       | FB/LP/XC 目前是这三种类型 |
 entry_name | String  | 50      | N       | 游戏的多个马甲包名字 |
