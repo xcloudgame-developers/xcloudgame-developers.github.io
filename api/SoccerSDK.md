@@ -25,6 +25,7 @@ Y---->必须,N---非必须
  UC接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
  UC接收Facebook信息接口：https://tecnofut.xcloudgame.com/Pt/getfb<br/>
  获取ios手机信息接口：https://tecnofut.xcloudgame.com/Pt/getios<br/>
+ ios生成游客接口：https://tecnofut-test.xcloudgame.com/Pt/tourist<br/>
  ios游客绑定接口：https://tecnofut.xcloudgame.com/Pt/touristdb<br/>
  获取安卓手机信息接口：https://tecnofut.xcloudgame.com/Pt/getandroid<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
