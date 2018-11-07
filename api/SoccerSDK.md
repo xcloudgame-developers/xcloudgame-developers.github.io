@@ -311,21 +311,25 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 >## 游客账户生成接口
 
-参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
----      | ---     | ---      | ---     | --- |
-channel  | String  | 50      | N       | 用户渠道（例：App Store、Google play) |
-app_id   | String  | 20      | Y       | App编号 | 
-gid      | int     | 11      | Y       | 游戏ID（游戏1、游戏2......） | 
-time     | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
-sign     | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---        | ---     | ---     | ---     | --- |
+entry_lang | String  | 50      | N       | pt/en |
+entry_type | String  | 50      | N       | FB/LP/XC 目前是这三种类型 |
+entry_name | String  | 50      | N       | 游戏的多个马甲包名字 |
+source     | String  | 50      | Y       | 下载渠道 |
+mainsource | String  | 50      | N       | 入口主渠道 |
+subsource  | String  | 50      | N       | 入口子渠道 |
+gameid     | int     | 11      | Y       | 游戏ID（游戏1、游戏2......） | 
+time       | int     | 11      | Y       | 用户注册时间 unix 时间戳（以秒为单位) | 
+sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >##### 签名方法
 
 所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
->##### data: email,password,uid
-成功后 返回json串其中status状态码,uid为用户ID
+>##### data: uid，gidloginid
+成功后 返回json串其中status状态码,uid为用户ID,
 
 
 
