@@ -363,7 +363,7 @@ sign               | String  | 50      | Y       | 数字签名：双方需要�
 ---   | ---  |
 100   | email信息不全 |
 101   | password信息不完整 |·
-102   | email 已被注册 |
+102   | facebook账号重复 |
 103   | password 错误 |
 104   | time信息不完整 |
 105   | sign信息不完整或信息有误 |
