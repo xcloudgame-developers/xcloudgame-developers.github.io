@@ -29,7 +29,7 @@ Y---->必须,N---非必须
  ios游客绑定接口：https://tecnofut.xcloudgame.com/Pt/touristdb<br/>
  获取安卓手机信息接口：https://tecnofut.xcloudgame.com/Pt/getandroid<br/>
  写入角色信息：https://tecnofut.xcloudgame.com/Pt/userinfo<br/>
- 更改角色信息：https://tecnofut.xcloudgame.com/Pt/userup<br/>
+ 角色升级修改信息：https://tecnofut.xcloudgame.com/Pt/userup<br/>
  埋点接口：https://tecnofut.xcloudgame.com/Pt/buried<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
