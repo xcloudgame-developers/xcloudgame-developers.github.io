@@ -160,17 +160,21 @@ sign         | String  | 50          | Y       | 数字签名：双方需要验�
 
 >## 接收ios设备信息接口 
 
-参数名       | 参数类型 | 最大长度     | 是否必填 | 描述 |
----          | ---     | ---         | ---     | --- |
-devicename   | String  | 50          | Y       | 设备名称（XXX的手机） |
-sysname      | String  | 50          | N       | 系统名称（iPhone OS） |
-sysversion   | String  | 50          | Y       | 系统版本（9.2）  |
-deviceuuid   | String  | 50          | Y       | 设备唯一标识 |
-devicemodel  | String  | 50          | Y       | 手机类型（iPhone 6 plus） |
-ua           | String  | 50          | Y       | 客户ua |
-ip           | String  | 50          | Y       | 客户ip |
-time         | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
-sign         | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+参数名            | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---               | ---     | ---         | ---     | --- |
+devicename        | String  | 50          | Y       | 设备名称（XXX的手机） |
+sysname           | String  | 50          | N       | 系统名称（iPhone OS） |
+sysversion        | String  | 50          | Y       | 系统版本（9.2）  |
+deviceuuid        | String  | 50          | Y       | 设备唯一标识 |
+devicemodel       | String  | 50          | Y       | 手机类型（iPhone 6 plus） |
+ua                | String  | 50          | Y       | 客户ua |
+carriername       | String  | 50          | Y       | carriername |
+mobilecountrycode | String  | 50          | Y       | mobilecountrycode |
+mobilenetworkcode | String  | 50          | Y       | mobilenetworkcode |
+isocountrycode    | String  | 50          | Y       | isocountrycode |
+ip                | String  | 50          | Y       | 客户ip |
+time              | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign              | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >##### 签名方法
 
@@ -408,6 +412,7 @@ sign      | String  | 50      | Y       | 数字签名：双方需要验证此�
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
 uid        | String  | 50      | Y       | uid |
+mark       | String  | 50      | Y       | 设备位置标识 |
 sid        | String  | 50      | Y       | 游戏服id | 
 mainclass  | string  | 20      | Y       | 主类 |
 subclass   | int     | 11      | Y       | 子类 |
