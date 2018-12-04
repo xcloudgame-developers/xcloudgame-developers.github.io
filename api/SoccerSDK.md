@@ -103,8 +103,8 @@ gameid              | String  | 50          | Y       | facebook用户第一次�
 fbappid             | String  | 50          | Y       | facebook用户第一次玩的游戏的facebook appid，facebook中申请的appid,类似入口名称 |
 facebook_id         | String  | 50          | Y       | facebook用户第一次玩的游戏的facebookid |
 entry_lang          | String  | 50          | N       | pt/en |
-entry_type          | String  | 50          | N       | FB/LP/XC 目前是这三种类型 |
-entry_name          | String  | 50          | N       | 游戏的多个马甲包名字 |
+entry_type          | String  | 50          | N       | 入口类型 （ios：Appstore、androiddata:Google play） |
+entry_name          | String  | 50          | N       | 游戏包名 |
 source              | String  | 50          | Y       | 下载渠道 |
 mainsource          | String  | 50          | N       | 入口主渠道 |
 subsource           | String  | 50          | N       | 入口子渠道 |
@@ -133,20 +133,23 @@ sign                | String  | 50          | Y       | 数字签名：双方需
 >##### data: uid、gidloginid
 成功后 返回json串其中status状态码,uid为用户ID，gidloginid为用户gidloginlog的id
 
->## 修改前UC接收Facebook信息接口
+>## UC接收Account Kit信息接口
 
-参数名       | 参数类型 | 最大长度     | 是否必填 | 描述 |
----          | ---     | ---         | ---     | --- |
-fbid         | String  | 50          | Y       | facebookID |
-fbmail       | String  | 50          | N       | facebook email |
-fbname       | String  | 50          | Y       | facebook fbname   |
-last_name    | String  | 50          | Y       | facebook last_name |
-first_name   | String  | 50          | Y       | facebook first_name |
-busid        | String  | 50          | Y       | facebook token_for_business (facebook 唯一标识) |
-channel_from | String  | 50          | Y       | 下载渠道 |
-gid          | int     | 10          | Y       | 游戏编号 |
-time         | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
-sign         | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---           | ---     | ---         | ---     | --- |
+gameid        | String  | 50          | Y       | 游戏id（15） |
+accountkit_id | String  | 50          | N       | Account Kit 唯一标识 |
+phone_number  | String  | 50          | Y       | Account Kit 手机号   |
+entry_lang    | String  | 50          | Y       | pt/en |
+first_name    | String  | 50          | Y       | facebook first_name |
+entry_type    | String  | 50          | Y       | 入口类型 （ios：Appstore、androiddata:Google play）|
+entry_name    | String  | 50          | Y       | 游戏包名 |
+device        | int     | 10          | Y       | 设备信息（ios/android）json数据  不参与加密 |
+source        | int     | 10          | Y       | 下载渠道  不参与加密 |
+mainsource    | int     | 10          | Y       | 主渠道  不参与加密 |
+subsource     | int     | 10          | Y       | 子渠道  不参与加密 |
+time          | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign          | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >##### 签名方法
 
@@ -188,15 +191,15 @@ sign              | String  | 50          | Y       | 数字签名：双方需�
 
 >## 接收安卓设备信息接口
 
-参数名       | 参数类型 | 最大长度     | 是否必填 | 描述 |
----          | ---     | ---         | ---     | --- |
-imei   | String  | 50          | Y       | IMEI号 |
-model      | String  | 50          | N       | 手机型号 |
-width   | String  | 50          | Y       | 手机内置分辨率getWidth  |
-height   | String  | 50          | Y       | getHeight |
-simoperatornam  | String  | 50          | Y       | 运营商名字 |
-time         | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
-sign         | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+参数名         | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---            | ---     | ---         | ---     | --- |
+imei           | String  | 50          | Y       | IMEI号 |
+model          | String  | 50          | N       | 手机型号 |
+width          | String  | 50          | Y       | 手机内置分辨率getWidth  |
+height         | String  | 50          | Y       | getHeight |
+simoperatornam | String  | 50          | Y       | 运营商名字 |
+time           | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign           | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >##### 签名方法
 
