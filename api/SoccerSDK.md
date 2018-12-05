@@ -431,6 +431,27 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 成功后 返回json串其中status状态码
 
 
+>## 埋点接口
+
+参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---        | ---     | ---     | ---     | --- | 
+uid        | String  | 50      | Y       | uid |
+gidloginid | String  | 50      | Y       | gidloginid |
+only       | String  | 50      | Y       | 设备唯一标识 | 
+source     | string  | 20      | Y       | 渠道（不参与加密） |
+mainsource | int     | 11      | Y       | 主渠道（不参与加密） |
+subsource  | int     | 11      | Y       | 子渠道（不参与加密） |
+time       | int     | 11      | Y       | 时间 |
+sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+成功后 返回json串其中status状态码
+
+
 
 >## 错误码
 
