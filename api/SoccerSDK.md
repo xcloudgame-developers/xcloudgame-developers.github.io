@@ -24,6 +24,8 @@ Y---->必须,N---非必须
  订单状态查询接口（post）（https://tecnofut.xcloudgame.com/Pt/checkorder）<br/>
  UC接收选服信息接口：https://tecnofut.xcloudgame.com/Pt/getsid<br/>
  UC接收Facebook信息接口：https://tecnofut.xcloudgame.com/Pt/getfb<br/>
+ UC接收accountkit信息接口：https://tecnofut.xcloudgame.com/Pt/getaccountkit<br/>
+ UC接收google信息接口：https://tecnofut.xcloudgame.com/Pt/getgoogle<br/>
  获取ios手机信息接口：https://tecnofut.xcloudgame.com/Pt/getios<br/>
  ios生成游客接口：https://tecnofut.xcloudgame.com/Pt/tourist<br/>
  ios游客绑定接口：https://tecnofut.xcloudgame.com/Pt/touristdb<br/>
@@ -31,6 +33,7 @@ Y---->必须,N---非必须
  写入角色信息：https://tecnofut.xcloudgame.com/Pt/userinfo<br/>
  角色升级修改信息：https://tecnofut.xcloudgame.com/Pt/userup<br/>
  埋点接口：https://tecnofut.xcloudgame.com/Pt/buried<br/>
+ 接收source接口：https://tecnofut.xcloudgame.com/Pt/getsource<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
 >## 返回值类型：
