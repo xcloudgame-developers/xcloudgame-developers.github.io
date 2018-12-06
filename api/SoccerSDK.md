@@ -160,6 +160,37 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 成功后 返回json串其中status状态码,uid为用户ID
 
 
+>## UC接收Google用户信息接口
+
+参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---           | ---     | ---         | ---     | --- |
+gameid        | String  | 50          | Y       | 游戏id（15） |
+person_id     | String  | 50          | N       | Google用户 唯一标识 |
+display_name  | String  | 50          | Y       | 用户名   |
+family_name   | String  | 50          | Y       | 姓   |
+given_name    | String  | 50          | Y       | 名   |
+email         | String  | 50          | Y       | 邮箱   |
+photo         | String  | 50          | Y       | 头像   |
+entry_lang    | String  | 50          | Y       | pt/en |
+first_name    | String  | 50          | Y       | facebook first_name |
+entry_type    | String  | 50          | Y       | 入口类型 （ios：Appstore、androiddata:Google play）|
+entry_name    | String  | 50          | Y       | 游戏包名 |
+device        | int     | 10          | Y       | 设备信息（ios/android）json数据  不参与加密 |
+source        | int     | 10          | Y       | 下载渠道  不参与加密 |
+mainsource    | int     | 10          | Y       | 主渠道  不参与加密 |
+subsource     | int     | 10          | Y       | 子渠道  不参与加密 |
+time          | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign          | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: uid
+成功后 返回json串其中status状态码,uid为用户ID
+
+
 
 >## 接收ios设备信息接口 
 
