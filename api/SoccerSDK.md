@@ -34,6 +34,7 @@ Y---->必须,N---非必须
  角色升级修改信息：https://tecnofut.xcloudgame.com/Pt/userup<br/>
  埋点接口：https://tecnofut.xcloudgame.com/Pt/buried<br/>
  接收source接口：https://tecnofut.xcloudgame.com/Pt/getsource<br/>
+ 添加分享图片：https://tecnofut.xcloudgame.com/Pt/upload<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
 >## 返回值类型：
@@ -486,7 +487,7 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 成功后 返回json串其中status状态码
 
 
->## 添加分享图片
+>## 添加分享图片  https://tecnofut.xcloudgame.com/Pt/upload
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
