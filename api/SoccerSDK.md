@@ -51,6 +51,7 @@ Y---->必须,N---非必须
 
 
 >## 修改后UC接收选服信息接口
+https://tecnofut.xcloudgame.com/Pt/getsid
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- |
@@ -75,27 +76,9 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 成功后 返回json串其中status状态码
 
->## 修改前UC接收选服信息接口
-
-参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
----        | ---     | ---         | ---     | --- |
-uid        | string  | 20          | Y       | 用户UID |
-sid        | int     | 10          | Y       | 游戏服ID |
-gid        | int     | 10          | Y       | 游戏编号 |
-er         | string  | 50          | Y       | 创建gid的入口（游戏下载渠道） |
-time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
-sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
-
->##### 签名方法
-
-所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
-
->##### Status：200、100、101......108、109、（见返回值代码说明）
-
-成功后 返回json串其中status状态码
-
 
 >## 修改后UC接收Facebook信息接口
+https://tecnofut.xcloudgame.com/Pt/getfb
 
 参数名              | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---                 | ---     | ---         | ---     | --- |
@@ -138,6 +121,7 @@ sign                | String  | 50          | Y       | 数字签名：双方需
 成功后 返回json串其中status状态码,uid为用户ID，gidloginid为用户gidloginlog的id
 
 >## UC接收Account Kit信息接口
+https://tecnofut.xcloudgame.com/Pt/getaccountkit
 
 参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---           | ---     | ---         | ---     | --- |
@@ -165,6 +149,7 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 
 
 >## UC接收Google用户信息接口
+https://tecnofut.xcloudgame.com/Pt/getgoogle
 
 参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---           | ---     | ---         | ---     | --- |
@@ -197,6 +182,7 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 
 
 >## 接收ios设备信息接口 
+https://tecnofut.xcloudgame.com/Pt/getios
 
 参数名            | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---               | ---     | ---         | ---     | --- |
@@ -225,6 +211,7 @@ sign              | String  | 50          | Y       | 数字签名：双方需�
 
 
 >## 接收安卓设备信息接口
+https://tecnofut.xcloudgame.com/Pt/getandroid
 
 参数名         | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---            | ---     | ---         | ---     | --- |
@@ -246,6 +233,7 @@ sign           | String  | 50          | Y       | 数字签名：双方需要�
 
 
 >## 下单接口
+https://tecnofut.xcloudgame.com/Pt/order
    
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
 ---        | ---     | ---         | ---     | --- | 
@@ -274,7 +262,8 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 成功后 返回json串其中status状态码，order_id 是支付成功返回的订单号 
 
 
->## google 支付验证接口 
+>## google 支付验证接口
+https://tecnofut.xcloudgame.com/Googlepay/check
     
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 | 
 ---        | ---     | ---         | ---     | --- | 
@@ -295,6 +284,7 @@ sign       | string  | 50          | Y       | 数字签名：双方需要验证
 
 
 >## apple pay 支付验证接口 
+https://tecnofut.xcloudgame.com/Applepay/check
  
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 | 
 ---        | ---     | ---         | ---     | --- | 
@@ -313,6 +303,7 @@ sign       | string  | 50          | Y       | 数字签名：双方需要验证
 
 
 >## 订单状态查询接口 
+https://tecnofut.xcloudgame.com/Pt/checkorder
  
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 | 
 ---        | ---     | ---         | ---     | --- | 
@@ -356,6 +347,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 
 >## 游客账户生成接口
+https://tecnofut.xcloudgame.com/Pt/tourist
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- |
@@ -381,6 +373,7 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 
 
 >## 游客绑定接口
+https://tecnofut.xcloudgame.com/Pt/touristdb
 
 参数名             | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---                | ---     | ---     | ---     | --- | 
@@ -400,6 +393,7 @@ sign               | String  | 50      | Y       | 数字签名：双方需要�
 
 
 >## 写入角色信息
+https://tecnofut.xcloudgame.com/Pt/userinfo
 
 参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---       | ---     | ---     | ---     | --- | 
@@ -423,6 +417,7 @@ sign      | String  | 50      | Y       | 数字签名：双方需要验证此�
 
 
 >## 角色升级修改信息
+https://tecnofut.xcloudgame.com/Pt/userup
 
 参数名    | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---       | ---     | ---     | ---     | --- | 
@@ -446,6 +441,7 @@ sign      | String  | 50      | Y       | 数字签名：双方需要验证此�
 
 
 >## 埋点接口
+https://tecnofut.xcloudgame.com/Pt/buried
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
@@ -467,6 +463,7 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 
 
 >## 接收source接口（用于补全获取source失败的用户的source）
+https://tecnofut.xcloudgame.com/Pt/getsource
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
@@ -487,7 +484,8 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 成功后 返回json串其中status状态码
 
 
->## 添加分享图片  https://tecnofut.xcloudgame.com/Pt/upload
+>## 添加分享图片  
+https://tecnofut.xcloudgame.com/Pt/upload
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
