@@ -489,7 +489,7 @@ https://tecnofut.xcloudgame.com/Pt/upload
 
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
-filename   | String  | 50      | Y       | 表单name名字（<input type="file" name="XXX"/>中的name的值）filename中的点(.)换成下划线(_) |
+filename   | String  | 50      | Y       | 表单name名字（input标签name的值）filename中的点(.)换成下划线(_) |
 imagecode  | String  | 50      | Y       | 分享的类型1、2、3...... |
 time       | int     | 11      | Y       | 时间 |
 sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
