@@ -159,7 +159,7 @@ display_name  | String  | 50          | Y       | 用户名   |
 family_name   | String  | 50          | Y       | 姓   |
 given_name    | String  | 50          | Y       | 名   |
 email         | String  | 50          | Y       | 邮箱   |
-photo         | String  | 50          | Y       | 头像   |
+photo         | String  | 50          | Y       | 头像   (不参与加密)|
 entry_lang    | String  | 50          | Y       | pt/en |
 first_name    | String  | 50          | Y       | facebook first_name |
 entry_type    | String  | 50          | Y       | 入口类型 （ios：Appstore、androiddata:Google play）|
