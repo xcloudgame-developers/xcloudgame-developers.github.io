@@ -506,6 +506,47 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 成功后 返回json串其中status状态码
 
 
+>## 获取分享图片和内容 
+https://tecnofut.xcloudgame.com/Suspension/share
+
+参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---        | ---     | ---     | ---     | --- | 
+type       | int     | 11      | Y       | 分享类型|
+time       | int     | 11      | Y       | 时间 |
+sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### url:图片链接
+>##### imagetitle:图片标题
+>##### imagesubtitle:图片描述
+
+成功后 返回json串其中status状态码
+
+
+>## 获取cdk  
+https://tecnofut.xcloudgame.com/Suspension/share_cdk
+
+参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---        | ---     | ---     | ---     | --- | 
+uid        | String  | 50      | Y       | 用户uid |
+gameid     | int     | 11      | Y       | 游戏id|
+time       | int     | 11      | Y       | 时间 |
+sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### cdk:兑换码
+
+成功后 返回json串其中status状态码
+
+
 
 >## 错误码
 
@@ -532,3 +573,4 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 118    |渠道订单异常 |
 119    |验证异常 |
 120    |支付失败或未支付|
+121    |当日已经分享过了|
