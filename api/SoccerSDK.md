@@ -533,8 +533,8 @@ https://tecnofut.xcloudgame.com/Suspension/share_cdk
 参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---        | ---     | ---     | ---     | --- | 
 uid        | String  | 50      | Y       | 用户uid |
-gameid     | int     | 11      | Y       | 游戏id|
-type       | string  | 50      | Y       | 游戏id|
+gameid     | int     | 11      | Y       | 游戏id |
+type       | string  | 50      | Y       | whatsapp、messenger |
 time       | int     | 11      | Y       | 时间 |
 sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
