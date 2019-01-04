@@ -559,18 +559,21 @@ time       | int     | 11      | Y       | 时间 |
 sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
 
 >#### 注：type=1，（以下参数不参与加密）
+
 参数名              | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---                 | ---     | ---     | ---     | --- | 
 facebook_id         | String  | 50      | Y       | Facebook ID |
 token_for_business  | String     | 50      | Y       | Facebook 唯一标识 |
 
 >#### 注：type=2，（以下参数不参与加密）
+
 参数名        | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---           | ---     | ---     | ---     | --- | 
 email         | String  | 50      | Y       | Google email |
 person_id     | String  | 50      | Y       | Google 唯一标识 |
 
 >#### 注：type=3，（以下参数不参与加密）
+
 参数名        | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---           | ---     | ---     | ---     | --- | 
 phone_number  | String  | 50      | Y       | accountkit 手机号 |
