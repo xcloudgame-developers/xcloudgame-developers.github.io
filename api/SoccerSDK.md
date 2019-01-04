@@ -548,6 +548,44 @@ sign       | String  | 50      | Y       | 数字签名：双方需要验证此�
 成功后 返回json串其中status状态码
 
 
+>## 绑定登录方式  
+https://tecnofut.xcloudgame.com/Suspension/login_method
+
+参数名     | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---        | ---     | ---     | ---     | --- | 
+uid        | String  | 50      | Y       | 用户uid |
+type       | int     | 50      | Y       | 1:facebook、2：google、3:accountkit |
+time       | int     | 11      | Y       | 时间 |
+sign       | String  | 50      | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>#### 注：type=1，（以下参数不参与加密）
+参数名              | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---                 | ---     | ---     | ---     | --- | 
+facebook_id         | String  | 50      | Y       | Facebook ID |
+token_for_business  | String     | 50      | Y       | Facebook 唯一标识 |
+
+>#### 注：type=2，（以下参数不参与加密）
+参数名        | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---           | ---     | ---     | ---     | --- | 
+email         | String  | 50      | Y       | Google email |
+person_id     | String  | 50      | Y       | Google 唯一标识 |
+
+>#### 注：type=3，（以下参数不参与加密）
+参数名        | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---           | ---     | ---     | ---     | --- | 
+phone_number  | String  | 50      | Y       | accountkit 手机号 |
+accountkit_id | String  | 50      | Y       | accountkit 唯一标识 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### cdk:兑换码
+
+成功后 返回json串其中status状态码
+
+
 
 >## 错误码
 
