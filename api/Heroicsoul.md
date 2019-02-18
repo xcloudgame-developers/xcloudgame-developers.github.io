@@ -1,10 +1,8 @@
 # 英雄战魂对接文档
->## 流程图
+>## UC登录流程图
 
-![](/assets/img/soccer.jpg)
+![](/assets/img/Heroicsoul.jpg)
 
->## 更新：
-UC接收Facebook信息接口添加参数：fbsource，last_name，first_name   -------------2018/8/21     
 >## 数填写说明：
 
 Y---->必须,N---非必须
@@ -12,8 +10,8 @@ Y---->必须,N---非必须
 >## 商户密钥（key）:
 商户密钥是通讯中用户数据加密及签名验证过程中所需的加密钥匙，该钥匙由双方接口技术人员约定。
 
->## 接口前缀：
- 地址： 域名 https://xxxx.xcloudgame.com/
+>## 接口域名：
+ 域名：xxxx.xcloudgame.com
 
 
 >## 调用登录及支付接口：
@@ -51,7 +49,7 @@ Y---->必须,N---非必须
 >## SDK通知游戏客户端登录注册结果
 
 
->## 修改后UC接收选服信息接口
+>## UC接收选服信息接口
 https://域名/Pt/getsid
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
@@ -75,10 +73,27 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
-成功后 返回json串其中status状态码
 
 
->## 修改后UC接收Facebook信息接口
+>## UC接收游戏服务端验证uid,sid,token接口
+https://域名/Pt/checkserver
+
+参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---        | ---     | ---         | ---     | --- |
+uid        | string  | 20          | Y       | 用户UID |
+sid        | int     | 10          | Y       | 游戏服务器编码 |
+time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+
+
+
+>## UC接收Facebook信息接口
 https://域名/Pt/getfb
 
 参数名              | 参数类型 | 最大长度     | 是否必填 | 描述 |
@@ -595,8 +610,9 @@ accountkit_id | String  | 50      | Y       | accountkit 唯一标识 |
 
 错误码 | 描述 |
 ---   | ---  |
+200    |成功|
 100   | email信息不全 |
-101   | password信息不完整 |·
+101   | password信息不完整 |
 102   | facebook账号重复 |
 103   | password 错误 |
 104   | time信息不完整 |
@@ -622,4 +638,5 @@ accountkit_id | String  | 50      | Y       | accountkit 唯一标识 |
 124    |uid未注册|
 125    |账号已被绑定或注册|
 126    |cep 无效|
+
 
