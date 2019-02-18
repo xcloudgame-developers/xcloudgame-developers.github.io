@@ -66,7 +66,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 
 
 
->## UC接收游戏服务端验证uid,sid,token接口
+>## UC接收游戏服务端验证用户唯一标识UID接口
 https://域名/Pt/checkserver
 
 参数名      | 参数类型 | 最大长度     | 是否必填 | 描述 |
