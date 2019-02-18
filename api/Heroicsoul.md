@@ -15,7 +15,7 @@ Y---->必须,N---非必须
 
 
 >## 调用登录及支付接口：
- >#H5页面地址：https://域名/Pt/landing<br/>(#1)
+ ># H5页面地址：https://域名/Pt/landing<br/>(#1)
  下单接口（post）（https://域名/Pt/order）<br/>
  发奖接口（post）（https://域名/Pt/send）<br/>
  谷歌支付验证接口（post）（https://域名/Googlepay/check）<br/>
