@@ -127,7 +127,7 @@ sign                | String  | 50          | Y       | 数字签名：双方需
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: uid、gidloginid
-成功后 返回json串其中status状态码,uid为用户ID，gidloginid为用户gidloginlog的id
+成功后 返回json串其中status状态码,uid为用户ID，gidloginid为用户gidloginlog的id，token加密串
 
 >## UC接收Account Kit信息接口
 https://域名/Pt/getaccountkit
@@ -154,7 +154,7 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: uid
-成功后 返回json串其中status状态码,uid为用户ID
+成功后 返回json串其中status状态码,uid为用户ID，token加密串
 
 
 >## UC接收Google用户信息接口
@@ -186,7 +186,7 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: uid
-成功后 返回json串其中status状态码,uid为用户ID
+成功后 返回json串其中status状态码,uid为用户ID，token加密串
 
 
 
