@@ -72,6 +72,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
+成功后 返回json串其中status为状态码
 
 
 
@@ -90,6 +91,7 @@ sign       | String  | 50          | Y       | 数字签名：双方需要验证
 所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
+成功后 返回json串其中status为状态码
 
 
 
