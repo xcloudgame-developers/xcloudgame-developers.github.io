@@ -73,6 +73,7 @@ https://域名/Pt/checkserver
 ---        | ---     | ---         | ---     | --- |
 uid        | string  | 20          | Y       | 用户UID |
 sid        | int     | 10          | Y       | 游戏服务器编码 |
+token      | string  | 100         | Y       | token |
 time       | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
 
