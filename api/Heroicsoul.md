@@ -434,7 +434,9 @@ https://域名/Pt/userup
 uid       | String  | 50      | Y       | uid |
 sid       | String  | 50      | Y       | 游戏服id | 
 rolename  | string  | 20      | Y       | 角色名 |
-pid       | string  | 20      | Y       | 游戏pid |
+rid        | String  | 50      | Y       | 角色id | 
+profession | String  | 50      | Y       | 职业 | 
+dph        | String  | 50      | Y       | DPH值 | 
 grade     | string  | 20      | Y       | 等级 |
 combat    | string  | 20      | Y       | 战力 |
 vip       | string  | 20      | Y       | VIP等级 |
@@ -458,6 +460,7 @@ https://域名/Pt/buried
 uid        | String  | 50      | Y       | uid |
 mark       | String  | 50      | Y       | 设备唯一标识（不参与加密） |
 sid        | String  | 50      | Y       | 游戏服id | 
+rid        | String  | 50      | Y       | 角色id | 
 mainclass  | string  | 20      | Y       | 主类 |
 subclass   | int     | 11      | Y       | 子类 |
 entry_type | int     | 11      | Y       | 入口类型 |
