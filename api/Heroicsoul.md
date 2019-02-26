@@ -340,10 +340,8 @@ sid        | int     | 10          | Y       | 游戏服ID |
 gid        | int     | 10          | Y       | 游戏编号 |
 app_id     | string  | 20          | Y       | app编号 |
 game_order | string  | 20          | Y       | 游戏订单号 |
-amount     | float   |保留两位小数   | Y       | 订单金额 |
 currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. USD）|
-game_money | int     | 11          | Y       | 游戏币数量 |
-game_good_id | int   | 10          | Y       | 套餐编号（无默认1）|
+product_id | int   | 10          | Y       | 套餐编号|
 channel    | string  | 20          | Y       | 下单渠道 |
 data       | string  | 100         | N       | 传递参数 |
 sign       | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
