@@ -621,4 +621,5 @@ accountkit_id | String  | 50      | Y       | accountkit 唯一标识 |
 124    |uid未注册|
 125    |账号已被绑定或注册|
 126    |cep 无效|
+127    |cdk 没有库存|
 
