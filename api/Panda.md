@@ -410,7 +410,6 @@ sid       | String  | 50      | Y       | 游戏服id |
 rolename  | string  | 20      | Y       | 角色名 |
 rid        | String  | 50      | Y       | 角色id | 
 profession | String  | 50      | Y       | 职业 | 
-dph        | String  | 50      | N       | DPH值 | 
 grade     | string  | 20      | Y       | 等级 |
 combat    | string  | 20      | Y       | 战力 |
 vip       | string  | 20      | Y       | VIP等级 |
@@ -436,7 +435,6 @@ sid       | String  | 50      | Y       | 游戏服id |
 rolename  | string  | 20      | Y       | 角色名 |
 rid        | String  | 50      | Y       | 角色id | 
 profession | String  | 50      | Y       | 职业 | 
-dph        | String  | 50      | Y       | DPH值 | 
 grade     | string  | 20      | Y       | 等级 |
 combat    | string  | 20      | Y       | 战力 |
 vip       | string  | 20      | Y       | VIP等级 |
