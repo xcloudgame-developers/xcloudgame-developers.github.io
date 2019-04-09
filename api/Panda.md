@@ -340,6 +340,7 @@ sid        | int     | 10          | Y       | 游戏服ID |
 gid        | int     | 10          | Y       | 游戏编号 |
 app_id     | string  | 20          | Y       | app编号 |
 game_order | string  | 20          | Y       | 游戏订单号 |
+amount     | float  | 10          | Y       | 订单金额 |
 currency   | 金额币种  | 金额币种    | Y       | 币种（e.g. USD）|
 product_id | int   | 10          | Y       | 套餐编号|
 channel    | string  | 20          | Y       | 下单渠道 |
