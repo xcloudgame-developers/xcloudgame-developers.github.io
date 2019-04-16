@@ -21,20 +21,20 @@ Y---->必须,N---非必须
  谷歌支付验证接口（post）（https://域名/Googlepay/check）<br/>
  苹果验证接口（post）（https://域名/Applepay/check）<br/>
  订单状态查询接口（post）（https://域名/Pt/checkorder）<br/>
- UC接收选服信息接口：https://域名/Pt/getsid<br/>
- UC接收游戏服务端验证用户唯一标识UID接口：https://域名/Pt/checkserver<br/>
- UC接收Facebook信息接口：https://域名/Pt/getfb<br/>
- UC接收accountkit信息接口：https://域名/Pt/getaccountkit<br/>
- UC接收google信息接口：https://域名/Pt/getgoogle<br/>
- 获取ios手机信息接口：https://域名/Pt/getios<br/>
- ios生成游客接口：https://域名/Pt/tourist<br/>
- ios游客绑定接口：https://域名/Pt/touristdb<br/>
- 获取安卓手机信息接口：https://域名/Pt/getandroid<br/>
- 写入角色信息：https://域名/Pt/userinfo<br/>
- 角色升级修改信息：https://域名/Pt/userup<br/>
- 埋点接口：https://域名/Pt/buried<br/>
- 接收source接口：https://域名/Pt/getsource<br/>
- 添加分享图片：https://域名/Pt/upload<br/>
+ UC接收选服信息接口（post）：https://域名/Pt/getsid<br/>
+ UC接收游戏服务端验证用户唯一标识UID接口（post）：https://域名/Pt/checkserver<br/>
+ UC接收Facebook信息接口（post）：https://域名/Pt/getfb<br/>
+ UC接收accountkit信息接口（post）：https://域名/Pt/getaccountkit<br/>
+ UC接收google信息接口（post）：https://域名/Pt/getgoogle<br/>
+ 获取ios手机信息接口（post）：https://域名/Pt/getios<br/>
+ ios生成游客接口（post）：https://域名/Pt/tourist<br/>
+ ios游客绑定接口（post）：https://域名/Pt/touristdb<br/>
+ 获取安卓手机信息接口（post）：https://域名/Pt/getandroid<br/>
+ 写入角色信息（post）：https://域名/Pt/userinfo<br/>
+ 角色升级修改信息（post）：https://域名/Pt/userup<br/>
+ 埋点接口（post）：https://域名/Pt/buried<br/>
+ 接收source接口（post）：https://域名/Pt/getsource<br/>
+ 添加分享图片（post）：https://域名/Pt/upload<br/>
  找回密码接口（点击找回密码，跳转到浏览器，访问手机端网页版找回密码）
 
 >## 返回值类型：
