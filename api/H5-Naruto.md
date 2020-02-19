@@ -12,7 +12,7 @@ Y---->必须,N---非必须
 >## 接口前缀：
  测试地址：https://XXX.xcloudgame.com/
  正式地址：https://XXX.xcloudgame.com/
- 登录页面地址：https://XXX.xcloudgame.com/
+ 登录页面地址：https://XXX.xcloudgame.com/（平台提供）
 
 >## 选服成功回调（平台提供，游戏调用）
 
