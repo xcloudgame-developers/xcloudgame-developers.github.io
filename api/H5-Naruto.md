@@ -7,8 +7,9 @@ Y---->必须,N---非必须
 >## 商户密钥（key）:
 商户密钥是通讯中用户数据加密及签名验证过程中所需的加密钥匙，该钥匙由双方接口技术人员约定。
 >## 接口前缀：
- 测试地址：http://XXX.xcloudgame.com/
- 正式地址：http://XXX.xcloudgame.com/
+ 测试地址：https://XXX.xcloudgame.com/
+ 正式地址：https://XXX.xcloudgame.com/
+ 登录页面地址：https://XXX.xcloudgame.com/
 
 >## 选服成功回调
 
