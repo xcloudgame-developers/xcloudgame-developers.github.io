@@ -56,7 +56,7 @@ sing | String | 50 | Y | md5($uid $sid $game_order $game_money $Key)
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 
 
-
+>## 下单接口待定
 
 
 
