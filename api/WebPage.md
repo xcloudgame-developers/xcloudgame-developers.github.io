@@ -6,13 +6,10 @@ Y---->必须,N---非必须
 
 >## 商户密钥（key）:
 商户密钥是通讯中用户数据加密及签名验证过程中所需的加密钥匙，该钥匙由双方接口技术人员约定。
->## 接口前缀：
- 测试地址：http://XXX.xcloudgame.com/
- 正式地址：http://XXX.xcloudgame.com/
 
 >## 登录接口
 
->#### 请求方式：get
+>#### 请求方式：post
 
 >#### 返回值类型：json
 
@@ -24,7 +21,7 @@ email | String | 50 | Y | 用户email
 password | String | 50 | Y | 用户密码 | 
 sid | int | 11 | Y | 区ID | 
 time | int | 11 | Y | 用户登录时间 unix 时间戳（以秒为单位） | 
-sing | String | 50 | Y | md5($email $password $sid $time $key)
+sign | String | 50 | Y | md5($email $password $sid $time $key)
 
 >### 
 >#### 返回结果
@@ -36,7 +33,7 @@ sing | String | 50 | Y | md5($email $password $sid $time $key)
 
 
 >## 注册接口
->#### 请求方式：get
+>#### 请求方式：post
 >#### 返回值类型：json
 
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
@@ -44,7 +41,7 @@ sing | String | 50 | Y | md5($email $password $sid $time $key)
 email | String | 50 | Y | 用户email
 password | String | 50 | Y | 用户密码 | 
 time | int | 11 | Y | 用户注册时间 unix 时间戳（以秒为单位） | 
-sing | String | 50 | Y | md5($email $password $time $key)
+sign | String | 50 | Y | md5($email $password $time $key)
 
 >### 
 >#### 返回结果
@@ -56,7 +53,7 @@ sing | String | 50 | Y | md5($email $password $time $key)
 
 
 >## 同步接口
->#### 请求方式：get
+>#### 请求方式：post
 >#### 返回值类型：json
 
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
@@ -64,7 +61,7 @@ sing | String | 50 | Y | md5($email $password $time $key)
 uid | bigint | 110 | 用户编号
 email | String | 50 | Y | 用户email
 password | String | 50 | Y | 用户密码 | 
-sing | String | 50 | Y | md5($uid $email $password $key)
+sign | String | 50 | Y | md5($uid $email $password $key)
 
 >### 
 >#### 返回结果
@@ -77,7 +74,7 @@ sing | String | 50 | Y | md5($uid $email $password $key)
 
 >## 角色查询接口
 
->#### 请求方式：get
+>#### 请求方式：post
 
 >#### 返回值类型：json
 
@@ -87,7 +84,7 @@ sing | String | 50 | Y | md5($uid $email $password $key)
 uid | bigint | 110 | Y | 用户编号
 sid | int | 11 | Y | 区ID | 
 time | int | 11 | Y | 用户注册时间 unix 时间戳（以秒为单位） | 
-sing | String | 50 | Y | md5($uid $sid $time $key)
+sign | String | 50 | Y | md5($uid $sid $time $key)
 
 >### 
 >#### 返回结果
@@ -100,7 +97,7 @@ sing | String | 50 | Y | md5($uid $sid $time $key)
 
 
 >## 游戏发奖通知接口
->#### 请求方式：get
+>#### 请求方式：post
 >#### 返回值类型：json
 
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
