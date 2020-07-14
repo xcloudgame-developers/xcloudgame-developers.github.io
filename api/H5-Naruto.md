@@ -131,6 +131,7 @@ sign | String | 50 | Y | md5($uid $token $time & $key)
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---  | --- | --- | --- | --- | 
 image | String | 50 | Y | 游戏内当前页面图片
+type | String | 50 | Y | （facebook,google）
 time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） | 
 
 >### 
