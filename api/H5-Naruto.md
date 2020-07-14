@@ -123,7 +123,7 @@ time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） |
 sign | String | 50 | Y | md5($uid $token $time & $key)
 
 
->##游戏内分享js方法（平台提供，游戏调用）
+>## 游戏内分享js方法（平台提供，游戏调用）
 
 >#### 方法名：share
 
