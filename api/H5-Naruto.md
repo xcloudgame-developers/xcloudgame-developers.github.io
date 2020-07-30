@@ -25,7 +25,8 @@ Y---->必须,N---非必须
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---  | --- | --- | --- | --- | 
 uid | String | 50 | Y | 用户uid
-sid | String | 50 | Y | 用户当前所在游戏服ID | 
+notify_url | String | 250 | Y | 验证用户uid地址 | 
+return_url | String | 250 | Y | 选服成功回调地址 | 
 time | int | 11 | Y | 登录时间 unix 时间戳（以秒为单位） | 
 sign | String | 50 | Y | md5($uid $sid $time & $key)
 
