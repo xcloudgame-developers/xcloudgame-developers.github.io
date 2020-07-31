@@ -47,7 +47,7 @@ sign | String | 50 | Y | md5($uid $sid $time & $key) 注意加&符号
 uid | String | 50 | Y | 用户uid
 sid | String | 50 | Y | 用户当前所在游戏服ID | 
 time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） | 
-sign | String | 50 | Y | md5($uid $sid $time & $key)
+sign | String | 50 | Y | md5($uid $sid $time & $key)注意加&符号
 
 >### 
 >#### 返回结果
@@ -69,7 +69,7 @@ sid | int | 11 | Y | 区ID |
 game_order | string | 20 | Y | 游戏订单号 |
 game_money | int | 10 | Y | 游戏币数量 |
 data | string | 100 | Y | 透传参数 | 
-sign | String | 50 | Y | md5($uid $sid $game_order $game_money $Key)
+sign | String | 50 | Y | md5($uid $sid $game_order $game_money & $Key)注意加&符号
 
 >### 
 >#### 返回结果
@@ -94,7 +94,7 @@ amount | float | 10 | Y | 订单金额 |
 currency | string | 3 | Y | 订单号币种 例如BRL |
 game_money | int | 10 | Y | 游戏币数量 |
 data | string | 100 | Y | 透传参数 | 
-sign | String | 50 | Y | md5($uid $sid $game_order $game_money $Key)
+sign | String | 50 | Y | md5($uid $sid $game_order $game_money & $Key)注意加&符号
 
 >### 
 >#### 返回结果
@@ -119,7 +119,7 @@ sign | String | 50 | Y | md5($uid $sid $game_order $game_money $Key)
 uid | String | 50 | Y | 用户uid
 token | String | 50 | Y | 登录时sdk提供的token | 
 time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） | 
-sign | String | 50 | Y | md5($uid $token $time & $key)
+sign | String | 50 | Y | md5($uid $token $time & $key)注意加&符号
 
 
 >## 游戏内分享js方法（平台提供，游戏调用）
