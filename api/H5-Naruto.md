@@ -26,7 +26,7 @@ Y---->必须,N---非必须
 ---  | --- | --- | --- | --- | 
 uid | String | 50 | Y | 用户uid
 time | int | 11 | Y | 登录时间 unix 时间戳（以秒为单位） | 
-sign | String | 50 | Y | md5($uid $sid $time & $key)
+sign | String | 50 | Y | md5($uid $sid $time & $key) 注意加&符号
 
 >### 
 >#### 返回结果
