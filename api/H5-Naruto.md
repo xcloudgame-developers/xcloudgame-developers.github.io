@@ -47,6 +47,7 @@ sign | String | 50 | Y | md5($uid $sid $time & $key) 注意加&符号 |
 ---  | --- | --- | --- | --- | 
 uid | String | 50 | Y | 用户uid
 sid | String | 50 | Y | 用户当前所在游戏服ID | 
+logid | int | 11 | Y | 用户登陆log ID |
 time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） | 
 sign | String | 50 | Y | md5($uid $sid $time & $key)注意加&符号
 
