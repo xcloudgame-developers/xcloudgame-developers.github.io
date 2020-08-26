@@ -24,9 +24,10 @@ Y---->必须,N---非必须
 
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---  | --- | --- | --- | --- | 
-uid | String | 50 | Y | 用户uid
+uid | String | 50 | Y | 用户uid |
+logid | int | 11 | Y | 用户登陆log ID |
 time | int | 11 | Y | 登录时间 unix 时间戳（以秒为单位） | 
-sign | String | 50 | Y | md5($uid $sid $time & $key) 注意加&符号
+sign | String | 50 | Y | md5($uid $sid $time & $key) 注意加&符号 |
 
 >### 
 >#### 返回结果
