@@ -121,6 +121,26 @@ time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） |
 sign | String | 50 | Y | md5($uid $token $time & $key)注意加&符号
 
 
+>## 埋点接口（平台提供，游戏调用）
+
+>#### 请求方式：post
+
+>#### 返回值类型：json
+
+>#### 参数
+
+参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
+---  | --- | --- | --- | --- | 
+uid | String | 50 | Y | 用户uid |
+sid | String | 50 | Y | 用户sid |
+rid | String | 50 | Y | 用户角色id |
+mainclass | String | 50 | Y | 主类 | 
+subclass | String | 50 | Y | 主类 | 
+moditime | int | 11 | Y | 修改时间 | 
+sign | String | 50 | Y | md5($uid $sid $rid $mainclass $subclass $time & $key)注意加&符号
+
+
+
 >## 游戏内分享js方法（平台提供，游戏调用）
 
 >#### 方法名：share
