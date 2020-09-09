@@ -88,7 +88,9 @@ sign | String | 50 | Y | md5($uid $sid $game_order $game_money & $Key)注意加&
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---  | --- | --- | --- | --- | 
 uid | bigint | 110 | Y | 用户编号
+username | string | 110 | Y | 用户编号
 sid | int | 11 | Y | 区ID | 
+servername | string | 50 | Y | 区名称 | 
 game_order | string | 20 | Y | 游戏订单号 |
 product_id | string | 20 | Y | 游戏套餐编号 |
 amount | float | 10 | Y | 订单金额 |
