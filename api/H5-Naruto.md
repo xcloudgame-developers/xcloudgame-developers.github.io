@@ -124,6 +124,7 @@ sign | String | 50 | Y | md5($uid $token $time & $key)注意加&符号
 >## 埋点接口（平台提供，游戏调用）
 
 >#### 请求方式：post
+>#### 链接：url/game/buried
 
 >#### 返回值类型：json
 
@@ -137,7 +138,6 @@ rid | String | 50 | Y | 用户角色id |
 mainclass | String | 50 | Y | 主类 | 
 subclass | String | 50 | Y | 主类 | 
 moditime | int | 11 | Y | 修改时间 | 
-entry_type | int | 11 | Y | 入口类型(H5,PC) | 
 sign | String | 50 | Y | md5($uid $sid $rid $mainclass $subclass $time & $key)注意加&符号
 
 
