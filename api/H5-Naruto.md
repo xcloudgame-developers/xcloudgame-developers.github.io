@@ -38,7 +38,7 @@ sign | String | 50 | Y | md5($uid $sid $time & $key) 注意加&符号 |
 >## 选服成功回调（平台提供，游戏调用）
 
 >#### 请求方式：post
-
+>#### 链接：url/game/callback
 >#### 返回值类型：json
 
 >#### 参数
@@ -104,21 +104,36 @@ sign | String | 50 | Y | md5($uid $sid $game_order $game_money & $Key)注意加&
 >##### 成功 弹出下单页面
 
 
-
->## 验证用户uid（平台提供，游戏调用）
+>## 创建或更新角色接口（平台提供，游戏调用）
 
 >#### 请求方式：post
-
+>#### 链接：url/game/userinfo
 >#### 返回值类型：json
 
 >#### 参数
 
 参数名 | 参数类型 | 最大长度 | 是否必填 | 描述 |
 ---  | --- | --- | --- | --- | 
-uid | String | 50 | Y | 用户uid
-token | String | 50 | Y | 登录时sdk提供的token | 
-time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） | 
-sign | String | 50 | Y | md5($uid $token $time & $key)注意加&符号
+uid | String | 50 | Y | 用户uid |
+sid | String | 50 | Y | 游戏服id |
+rolename | String | 50 | Y | 角色名 |
+rid | String | 50 | Y | 角色id |
+profession | String | 50 | Y | 职业 |
+dph | String | 50 | Y | DPH值 |
+grade | String | 50 | Y | 等级 |
+combat | String | 50 | Y | 战力 |
+data | String | 50 | Y | data等级 | 
+addtime | int | 11 | Y | 添加时间 | 
+moditime | int | 11 | Y | 修改时间 | 
+sign | String | 50 | Y | 字典顺序排序后md5($ke1=$val1 &$key2=$val2 ... & $key)注意加&符号
+
+>### 
+>#### 返回结果
+>##### {
+>#####   
+>#####     "status": "200",//成功返回用户uid，失败为空
+>##### }
+>##### Status：200、100、101......108、109、（见返回值代码说明）
 
 
 >## 埋点接口（平台提供，游戏调用）
