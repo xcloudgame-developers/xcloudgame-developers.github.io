@@ -96,6 +96,7 @@ product_id | string | 20 | Y | 游戏套餐编号 |
 amount | float | 10 | Y | 订单金额 |
 currency | string | 3 | Y | 订单号币种 例如BRL |
 game_money | int | 10 | Y | 游戏币数量 |
+product_desc | string | 100 | Y | 商品描述 | 
 data | string | 100 | Y | 透传参数 | 
 sign | String | 50 | Y | md5($uid $sid $game_order $game_money & $Key)注意加&符号
 
