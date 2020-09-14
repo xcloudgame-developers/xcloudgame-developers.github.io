@@ -123,7 +123,6 @@ dph | String | 50 | Y | DPH值 |
 grade | String | 50 | Y | 等级 |
 combat | String | 50 | Y | 战力 |
 data | String | 50 | Y | data等级 | 
-addtime | int | 11 | Y | 添加时间 | 
 moditime | int | 11 | Y | 修改时间 | 
 sign | String | 50 | Y | 字典顺序排序后md5($ke1=$val1 &$key2=$val2 ... & $key)注意加&符号
 
