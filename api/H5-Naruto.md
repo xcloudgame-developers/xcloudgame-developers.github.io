@@ -105,7 +105,7 @@ sign | String | 50 | Y | md5($uid $sid $game_order $game_money & $Key)注意加&
 >##### 成功 弹出下单页面
 
 
->## 创建或更新角色接口（平台提供，游戏调用）
+>## 创建或更新角色信息接口（平台提供，游戏调用）
 
 >#### 请求方式：post
 >#### 链接：url/game/userinfo
