@@ -171,16 +171,120 @@ time | int | 11 | Y | 回调时间 unix 时间戳（以秒为单位） |
 >#### 直接分享不需要返回结果
 
 
+>## xcg平台账户登陆（平台提供，sdk调用）
+
+>#### 请求方式：post
+>#### 链接：url/Pt/getxcg_login
+>#### 返回值类型：json
+
+>#### 参数
+
+参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---           | ---     | ---         | ---     | --- |
+email        | String  | 50          | Y       | xcg账户 |
+password     | String  | 50          | N       | xcg密码 |
+entry_lang    | String  | 50          | Y       | pt/en |
+entry_type    | String  | 50          | Y       | 入口类型 （ios：Appstore、androiddata:Google play）|
+entry_name    | String  | 50          | Y       | 游戏包名 |
+device        | int     | 10          | Y       | 设备信息（ios/android）json数据  不参与加密 |
+source        | int     | 10          | Y       | 下载渠道  不参与加密 |
+mainsource    | int     | 10          | Y       | 主渠道  不参与加密 |
+subsource     | int     | 10          | Y       | 子渠道  不参与加密 |
+time          | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign          | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: uid
+成功后 返回json串其中status状态码,uid为用户ID，token加密串
+
+
+>## xcg平台账户注册（平台提供，sdk调用）
+
+>#### 请求方式：post
+>#### 链接：url/Pt/getxcg_reg
+>#### 返回值类型：json
+
+>#### 参数
+
+参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---           | ---     | ---         | ---     | --- |
+email        | String  | 50          | Y       | xcg账户 |
+password     | String  | 50          | N       | xcg密码 |
+entry_lang    | String  | 50          | Y       | pt/en |
+entry_type    | String  | 50          | Y       | 入口类型 （ios：Appstore、androiddata:Google play）|
+entry_name    | String  | 50          | Y       | 游戏包名 |
+device        | int     | 10          | Y       | 设备信息（ios/android）json数据  不参与加密 |
+source        | int     | 10          | Y       | 下载渠道  不参与加密 |
+mainsource    | int     | 10          | Y       | 主渠道  不参与加密 |
+subsource     | int     | 10          | Y       | 子渠道  不参与加密 |
+time          | int     | 11          | Y       | 操作时间 unix 时间戳（以秒为单位) |
+sign          | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: uid
+成功后 返回json串其中status状态码,uid为用户ID，token加密串
+
+
+>## xcg平台账户忘记密码（平台提供，sdk调用）
+
+>#### 请求方式：post
+>#### 链接：url/Pt/getxcg_reg
+>#### 返回值类型：json
+
+>#### 参数
+
+参数名        | 参数类型 | 最大长度     | 是否必填 | 描述 |
+---           | ---     | ---         | ---     | --- |
+email        | String  | 50          | Y       | xcg账户 |
+sign          | String  | 50          | Y       | 数字签名：双方需要验证此信息的正确性 |
+
+>##### 签名方法
+
+所有字段按照字典顺序排序后经过两次md5加密 sign=md5(md5("key1=value1&key2=value2&$key")) 加密key直接拼接在字符串后
+
+>##### Status：200、100、101......108、109、（见返回值代码说明）
+>##### data: uid
+成功后 返回json串其中status状态码,uid为用户ID，token加密串
+
+
+
 >## 错误码
 
-错误码 | 描述 | 
----  | ---  | 
-200 | 成功 |
-100 | uid为空 |
-101 | uid不存在 |
-102 | sid为空 |
-103 | sid不存在 |
-104 | time为空 |
-105 | sign信息不完整或信息有误 | 
-106 | 数据库操作失败 | 
-105 | Key错误 | 
+错误码 | 描述 |
+---   | ---  |
+200    |成功|
+100   | email信息不全 |
+101   | password信息不完整 |
+102   | facebook账号重复 |
+103   | password 错误 |
+104   | time信息不完整 |
+105   | sign信息不完整或信息有误 |
+106   | 数据库操作失败 |
+107   | 分区信息不全 |
+108   | Key错误 |
+109   | sid 有误 |
+110   | app_id 有误 |
+111   | game_order为空 |
+112   | game_order重复 |
+113   | amout 或currency错误 |
+114   | 需求参数为空 |
+115   | game_money 或game_good_id有误 |
+116   | 用户不存在 |
+117   | 系统错误 |
+118    |渠道订单异常 |
+119    |验证异常 |
+120    |支付失败或未支付|
+121    |当日已经分享过了|
+122    |cpf已经验证过了|
+123    |cpf错误|
+124    |uid未注册|
+125    |账号已被绑定或注册|
+126    |cep 无效|
