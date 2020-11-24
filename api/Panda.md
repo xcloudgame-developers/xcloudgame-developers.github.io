@@ -600,8 +600,6 @@ accountkit_id | String  | 50      | Y       | accountkit 唯一标识 |
 
 成功后 返回json串其中status状态码
 
-
-
 >## 错误码
 
 错误码 | 描述 |
