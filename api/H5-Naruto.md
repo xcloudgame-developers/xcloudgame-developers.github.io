@@ -252,8 +252,7 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 
 >##### Status：200、100、101......108、109、（见返回值代码说明）
 >##### data: uid
-成功后 返回json串其中status状态码,uid为用户ID，token加密串
-
+成功后 返回json串其中status状态码
 
 
 >## 错误码
