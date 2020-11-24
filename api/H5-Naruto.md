@@ -236,7 +236,7 @@ sign          | String  | 50          | Y       | 数字签名：双方需要验
 >## xcg平台账户忘记密码（平台提供，sdk调用）
 
 >#### 请求方式：post
->#### 链接：url/Pt/getxcg_reg
+>#### 链接：url/Pt/get_reset
 >#### 返回值类型：json
 
 >#### 参数
